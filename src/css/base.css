@@ -1,0 +1,157 @@
+/* Font Raleway */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* End Font Raleway */
+
+/* Root */
+
+:root {
+  --color-one: #E8E8E8; /* check */
+  --color-two: #b0c7da;
+
+  --background-color-1: #0A67AF; /* check */
+  --background-color-2: #FFFFFF; /* check */
+
+  --color-text: #757575;
+  
+  --color-text-title-black: #1E1E1E; /* check */
+  --font-main: "Raleway", sans-serif;
+}
+
+/* End root */
+
+/* Selection */
+
+::selection {
+  background: var(--color-two);  /* màu nền khi bôi đen */
+  color: var(--color-text-title-white);          /* màu chữ khi bôi đen */
+}
+
+/* End Selection */
+
+/* Body */
+
+body {
+  color: var(--color-text);
+  font-family: var(--font-main);
+  font-size: 15px;
+  font-variation-settings: "wdth" 100;
+}
+
+/* End Body */
+
+/*ul */
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+/* End ul */
+
+/* a */
+
+a:hover {
+  text-decoration: none;
+}
+
+/* End a */
+
+/* Button */
+
+.inner-button a{
+  text-align: center;
+  display: inline-block;
+  font-size: 13px;
+  border-radius: 20px;
+  padding: 12px 20px;
+  transition: all 0.5s ease 0s;
+}
+
+.button-pink a{
+  background-color: var(--color-two);
+  color: white;
+}
+
+.button-blue a{
+  background-color: var(--color-one);
+  color: white;
+}
+
+.button-pink a:hover {
+  background-color: var(--color-one);
+}
+
+.button-blue a:hover {
+  background-color: var(--color-two);
+}
+
+/* End Button */
+
+/* Inner-head-sub */
+
+.inner-head-sub {
+  width: 70%;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 20px 0px;
+  text-align: center;
+}
+
+/* End Inner-head-sub */
+
+/* Inner-title-sub */
+
+.inner-title-sub {
+  margin-bottom: 30px;
+}
+
+.title-sub-black {
+  color: var(--color-text-title-black);
+}
+
+.title-sub-white {
+  color: var(--color-text-title-white);
+}
+
+/* End Inner-title-sub */
+
+/* Inner-desc-sub */
+
+.inner-desc-sub {
+  color: var(--color-text);
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.desc-sub-white {
+  color: var(--color-text-title-white);
+}
+
+/* End Inner-desc-sub */
+
+/* .hr */
+
+.hr{
+  width: 100%;
+  height: 1px;
+  margin-top: 100px;
+  border-bottom: 1px solid #eee;
+}
+
+/* End .hr */
+
+/* Inner-title-box */
+
+.inner-title-box {
+  display: inline-block;
+  color: var(--color-text-title-black);
+  margin: 15px 0px 5px 0px;
+  font-weight: 500;
+  font-size: 17px; 
+}
+
+/* End Inner-title-box */

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Focus & Blur Example</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+    .container { background: #fff; padding: 20px; border-radius: 8px; max-width: 400px; margin: auto; }
+    label { display: block; margin-top: 10px; }
+    input[type="text"] { width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Focus & Blur Form</h2>
+    <form>
+      <label for="text1">Text 1:</label>
+      <input type="text" id="text1" name="text1">
+      <label for="text2">Text 2:</label>
+      <input type="text" id="text2" name="text2" readonly>
+    </form>
+  </div>
+  <script>
+    // Đặt focus vào text1 khi load trang
+    window.onload = function() {
+      document.getElementById('text1').focus();
+    };
+
+    // Xử lý blur: chuyển đổi chữ hoa-thường và hiển thị ở text2
+    document.getElementById('text1').addEventListener('blur', function() {
+      var value = this.value;
+      var result = '';
+      for (var i = 0; i < value.length; i++) {
+        result += (i % 2 === 0) ? value[i].toUpperCase() : value[i].toLowerCase();
+      }
+      document.getElementById('text2').value = result;
+    });
+  </script>
+</body>
+</html>

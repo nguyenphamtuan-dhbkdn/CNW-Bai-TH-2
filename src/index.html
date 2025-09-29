@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+  <head>
+    <title>Frameset Example</title>
+  </head>
+  <frameset rows="165, *, 80">
+    <frame name="T1" src="./layout/top/index.html" />
+    <frameset cols="214, *, 214">
+      <frame name="T2" src="./layout/left/index.html" />
+      <frameset cols="200, *, 200">
+        <frame name="sideBar" src="./layout/center/side-bar.html" />
+        <frame name="T3" src="./layout/center/index.html" />
+        <frame name="sideBar2" src="./layout/center/side-bar-2.html" />
+      </frameset>
+      <frame name="T4" src="./layout/right/index.html" />
+    </frameset>
+    <frame name="T5" src="./layout/bottom/index.html" />
+  </frameset>
+</html>

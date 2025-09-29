@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Giới thiệu về with trong JavaScript</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+    .container { background: #fff; padding: 20px; border-radius: 8px; max-width: 700px; margin: auto; }
+    h1 { color: #007bff; }
+    code, pre { background: #eee; padding: 4px 8px; border-radius: 4px; }
+    .warning { color: #dc3545; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Từ khóa <code>with</code> trong JavaScript</h1>
+    <h2>with là gì?</h2>
+    <p>
+      <code>with</code> là một từ khóa trong JavaScript dùng để mở rộng phạm vi truy cập các thuộc tính của một đối tượng, giúp viết code ngắn gọn hơn khi thao tác với nhiều thuộc tính của cùng một object.
+    </p>
+    <h2>with dùng để làm gì?</h2>
+    <ul>
+      <li>Giúp truy cập các thuộc tính của một object mà không cần lặp lại tên object nhiều lần.</li>
+      <li>Thường dùng trong các đoạn code ngắn, thao tác với nhiều thuộc tính của một object.</li>
+    </ul>
+    <h2>Cách dùng <code>with</code> trong JavaScript</h2>
+    <pre>
+with (object) {
+  // code truy cập trực tiếp các thuộc tính của object
+  property1 = value1;
+  property2 = value2;
+}
+    </pre>
+    <h3>Ví dụ minh họa:</h3>
+    <pre>
+var person = {
+  name: 'Tuan',
+  age: 22,
+  city: 'Da Nang'
+};
+
+with (person) {
+  console.log(name); // Tuan
+  console.log(age);  // 22
+  console.log(city); // Da Nang
+}
+    </pre>
+    <p class="warning">
+      Lưu ý: <code>with</code> bị khuyến cáo không nên dùng trong thực tế vì gây khó hiểu, khó debug và có thể làm giảm hiệu năng. Trong chế độ strict mode, <code>with</code> sẽ báo lỗi.
+    </p>
+    <h3>Thay thế <code>with</code> bằng cách khác:</h3>
+    <pre>
+var person = { name: 'Tuan', age: 22, city: 'Da Nang' };
+console.log(person.name);
+console.log(person.age);
+console.log(person.city);
+    </pre>
+  </div>
+</body>
+</html>

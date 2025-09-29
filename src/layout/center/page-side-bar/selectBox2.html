@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Select Box 2 - JavaScript Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+    .container { background: #fff; padding: 20px; border-radius: 8px; max-width: 400px; margin: auto; }
+    label { display: block; margin-top: 10px; }
+    select, input[type="text"] { width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; }
+    input[type="button"] { padding: 8px 16px; border-radius: 4px; background: #007bff; color: #fff; border: none; cursor: pointer; }
+    .desc { color: #555; font-size: 15px; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Select Box 2 Demo</h2>
+    <div class="desc">Chọn một option trong select box, nhấn nút "Chọn" để hiển thị số thứ tự của option đã chọn ở ô textbox.</div>
+    <form name="bai2" autocomplete="off">
+      <label for="test">Chọn option:</label>
+      <select name="test" id="test">
+        <option value="index0">index0</option>
+        <option value="index1">index1</option>
+        <option value="index2">index2</option>
+        <option value="index3">index3</option>
+      </select>
+      <label for="txt1">Số thứ tự đã chọn:</label>
+      <input type="text" name="txt1" id="txt1" readonly>
+      <input type="button" value="Chọn" onclick="showSelectedIndex()">
+    </form>
+  </div>
+  <script>
+    // Đặt focus vào select khi load trang
+    window.onload = function() {
+      document.getElementById('test').focus();
+    };
+
+    // Hiển thị số thứ tự của option đã chọn
+    function showSelectedIndex() {
+      var select = document.getElementById('test');
+      document.getElementById('txt1').value = select.selectedIndex;
+    }
+  </script>
+</body>
+</html>
